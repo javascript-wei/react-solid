@@ -1,12 +1,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactTest from './page/ReactTest'
+import App from './page/App'
 
-
-const App = ()=>{
-    return  <ReactTest></ReactTest>
-}
 function renderComponent() {
     ReactDOM.render(
         <App />,

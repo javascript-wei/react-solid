@@ -10,10 +10,25 @@ module.exports = {
   entry: './src/index.js',
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    alias:{
+      '@':path.resolve(__dirname,'./src')
+    }
   },
   devtool: 'source-map',
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+            // options: {
+            //   modules: true,
+            // },
+          },
+        ],
+      },
       {
         test: /\.jsx|.js$|.ts|.tsx/,
         use: {
