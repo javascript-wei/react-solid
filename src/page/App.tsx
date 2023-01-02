@@ -9,7 +9,7 @@ const App = () => {
   }
   return <>
     <div style={{ padding: '24px' }}>
-      <Card title="五种设计模式SOLID" style={{width:'70%',minWidth:'500px'}}>
+      <Card title="五种设计模式SOLID" style={{width:'70%',minWidth:'1000px'}}>
         <Tabs
           defaultActiveKey="1"
           onChange={onChange}

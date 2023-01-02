@@ -1,4 +1,4 @@
-const randomId = () => Math.floor(Math.random() * 10000000);
+const randomId = () => String(Math.floor(Math.random() * 10000000));
 
 export const mockList = [
     {
@@ -14,7 +14,8 @@ export const mockList = [
         title: '2022秋冬新款时尚红色双面羊绒大衣外套',
         price: 5696,
         discount: 0.7,
-        storeName: '欧黎蔓旗舰店'
+        storeName: '欧黎蔓旗舰店',
+        id: randomId(),
     },
     {
         img: 'https://img.alicdn.com/imgextra/i3/97497546/O1CN01YJcfv825c7UWIqoyk_!!0-saturn_solar.jpg_468x468q75.jpg_.webp',
