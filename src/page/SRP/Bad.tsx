@@ -43,7 +43,7 @@ export default () => {
       setTimeout(() => {
         reslove(mockList);
       }, 1000);
-    }).then((data: typeof mockList) => {
+  }).then((data: IProduct[]) => {
       productRef.current = data;
       filterProductList();
     });

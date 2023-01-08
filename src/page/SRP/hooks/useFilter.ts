@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { IFilterData, IProduct } from '@/typing'
+import { IFilterData } from '@/typing'
 
 export const useFilterProduct = () => {
   const [filterData, setFilterData] = useState<IFilterData>({});

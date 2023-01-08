@@ -1,5 +1,4 @@
 import React from 'react';
-import { mockList } from './mock'
 import { TaobaoCircleOutlined } from '@ant-design/icons';
 import { IProduct } from '@/typing';
 
