@@ -14,7 +14,7 @@ export const isTelephone = (value: string) => {
  * @param options 校验方法配置参数 https://ant-design.gitee.io/components/form-cn#rule
 */
 
-export const buildAntd4FormValidator = (
+export const badBuildAntd4FormValidator = (
   validName: 'isEmail' | 'isTelephone',
   message: string,
   options: any = {},
@@ -39,7 +39,7 @@ export const buildAntd4FormValidator = (
   }
 }
 
-export const buildAntd4FormValidator1 = (
+export const goodBuildAntd4FormValidator = (
   validFun: (value: string) => boolean,
   message: string,
   options: any = {},

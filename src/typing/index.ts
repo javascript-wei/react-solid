@@ -1,3 +1,5 @@
+import React from "react";
+
 export interface IProduct {
   img?: string;
   title?: string;
@@ -11,6 +13,10 @@ export interface IFilterData {
   maxNum?: number | undefined | null;
 }
 export interface IButtonProps {
-  text?:string,
-  rule?:'back'|'forward',
+  text?: string,
+  rule?: 'back' | 'forward'
+}
+export interface IGoodButtonProps {
+  text?: string,
+  icon?: React.ReactNode
 }

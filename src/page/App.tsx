@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Srp from '@/page/SRP';
 import Ocp from '@/page/OCP';
+import Lsp from '@/page/LSP';
 import 'antd/dist/antd.css';
 import { Card, Tabs } from 'antd';
 
@@ -9,7 +10,7 @@ const App = () => {
     <div style={{ padding: '24px' }}>
       <Card title="五种设计模式SOLID" style={{ width: '70%', minWidth: '1000px' }}>
         <Tabs
-         defaultActiveKey='2'
+         defaultActiveKey='3'
           items={[
             {
               label: `SRP`,
@@ -20,6 +21,11 @@ const App = () => {
               label: `OCP`,
               key: '2',
               children: <Ocp />,
+            },
+            {
+              label: `LSP`,
+              key: '3',
+              children: <Lsp />,
             },
           ]}
         />

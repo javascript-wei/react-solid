@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { isValidElement } from 'react';
 import { RightOutlined, LeftOutlined } from '@ant-design/icons';
 import { IButtonProps } from '@/typing';
 
@@ -20,6 +20,7 @@ export default (props: IButtonProps) => {
       {text}
       {rule === 'back' && <RightOutlined />}
       {rule === 'forward' && <LeftOutlined />}
+      {isValidElement(rule) && rule}
     </button>
   </>
 }
