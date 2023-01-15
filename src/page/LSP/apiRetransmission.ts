@@ -1,6 +1,6 @@
 // 符合LSP原则
 class Retransmission {
-  public async call(fn: (...arg) => Promise<any>) {
+  public async retry(fn: () => Promise<any>) {
     let response = null;
     for (let count = 0;; count++) {
       try {
@@ -16,7 +16,7 @@ class Retransmission {
 }
 
 class BaseRetransmission extends Retransmission {
-  public async call(fn: (...arg) => Promise<any>) {
+  public async retry(fn: () => Promise<any>) {
     let response = null;
     for (let count = 0;; count++) {
       try {
@@ -33,8 +33,8 @@ class BaseRetransmission extends Retransmission {
 }
 
 // 违反LSP原则
-// class Retransmission {
-//   public async call(fn: (...arg) => Promise<any>) {
+// class BaseRetransmission {
+//   public async retry(fn: (...arg) => Promise<any>) {
 //     let response = null;
 //     for (let count = 0;; count++) {
 //       try {
@@ -49,8 +49,8 @@ class BaseRetransmission extends Retransmission {
 //     }
 //   }
 // }
-// class BaseRetransmission extends Retransmission  {
-//   public async call(fn: (...arg) => Promise<any>) {
+// class Retransmission extends BaseRetransmission  {
+//   public async retry(fn: (...arg) => Promise<any>) {
 //     let response = null;
 //     for (let count = 0;; count++) {
 //       try {

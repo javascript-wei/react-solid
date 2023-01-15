@@ -4,7 +4,7 @@ interface IInputProps
   extends React.InputHTMLAttributes<HTMLElement> {
   label?: string;
 }
-export default (props: IInputProps) => {
+const CustomInput = (props: IInputProps) => {
   const { label = '', value, onChange, ...restProps } = props
   return <>
     <div style={{ display: 'flex' }}>
@@ -27,3 +27,4 @@ export default (props: IInputProps) => {
 
   </>
 }
+export default CustomInput;
