@@ -1,4 +1,8 @@
-// 符合LSP原则
+
+/**
+ * 接口重传
+ * @otherDes 符合LSP原则
+*/
 class Retransmission {
   public async retry(fn: () => Promise<any>) {
     let response = null;
